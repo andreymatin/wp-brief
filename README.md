@@ -1,1 +1,1 @@
-# wp-description
+# wp-brief plguin
