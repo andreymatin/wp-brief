@@ -28,7 +28,6 @@ define('WPB_VERSION', '1.0.0');
 $wpb_options = get_option('wpb_settings');
 
 if (is_admin()) {
-  require_once(plugin_dir_path(__FILE__) . '/includes/wp-brief-init.php');
   require_once(plugin_dir_path(__FILE__) . '/includes/wp-brief-scripts.php');
   require_once(plugin_dir_path(__FILE__) . '/includes/wp-brief-widget.php');
   require_once(plugin_dir_path(__FILE__) . '/includes/wp-brief-settings.php');
