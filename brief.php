@@ -3,11 +3,11 @@
 /**
  * @link              https://github.com/andreymatin
  * @since             1.0.0
- * @package           WP Brief
+ * @package           Brief
  *
  * @wordpress-plugin
- * Plugin Name:       WP Brief
- * Plugin URI:        https://github.com/andreymatin/wp-brief
+ * Plugin Name:       Brief
+ * Plugin URI:        
  * Description:       Development reports and documentation
  * Version:           1.0.0
  * Author:            Andrew Matin
@@ -28,9 +28,9 @@ define('WPB_VERSION', '1.0.0');
 $wpb_options = get_option('wpb_settings');
 
 if (is_admin()) {
-  require_once(plugin_dir_path(__FILE__) . '/includes/wp-brief-scripts.php');
-  require_once(plugin_dir_path(__FILE__) . '/includes/wp-brief-widget.php');
-  require_once(plugin_dir_path(__FILE__) . '/includes/wp-brief-settings.php');
+  require_once(plugin_dir_path(__FILE__) . '/includes/brief-scripts.php');
+  require_once(plugin_dir_path(__FILE__) . '/includes/brief-widget.php');
+  require_once(plugin_dir_path(__FILE__) . '/includes/brief-settings.php');
 
   /**
    * Add Settings Link

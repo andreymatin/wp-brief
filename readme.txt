@@ -38,7 +38,7 @@ This plugin does not:
 
 == Installation ==
 
-1. Upload `wp-brief` to the `/wp-content/plugins/` directory
+1. Upload `brief` to the `/wp-content/plugins/` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
 
 == How to use ==
@@ -52,11 +52,6 @@ This plugin does not:
 Changes will appear at 'Dashboard' area 'Brief' widget
 
 == Frequently Asked Questions
-
-Do you have questions or issues with WP Brief? Use these support channels appropriately.
-
-1. [Issues](https://github.com/andreymatin/wp-brief/issues)
-
 
 == Screenshots ==
 
