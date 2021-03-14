@@ -32,4 +32,18 @@ if (is_admin()) {
   require_once(plugin_dir_path(__FILE__) . '/includes/wp-brief-scripts.php');
   require_once(plugin_dir_path(__FILE__) . '/includes/wp-brief-widget.php');
   require_once(plugin_dir_path(__FILE__) . '/includes/wp-brief-settings.php');
+
+  /**
+   * Add Settings Link
+   *
+   * @param [type] $links
+   * @return void
+   */
+  function wpb_settings($links)
+  {
+    $links[] = '<a href="' . admin_url('options-general.php?page=wpb-options') . '">' . __('Settings') . '</a>';
+    return $links;
+  }
+
+  add_filter('plugin_action_links_' . plugin_basename(__FILE__), 'wpb_settings');
 }
