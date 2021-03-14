@@ -16,8 +16,8 @@ The plugin supports markdown format. Developer can also add brand logo and link 
 
 = Features =
 
-1. Changelog in markdown format
-1. Readme in markdown format
+1. Changelog in Markdown format
+1. Readme in Markdown format
 1. Brand Logo/Link
 1. Enable/Disable dashboard widget
 
@@ -40,6 +40,16 @@ This plugin does not:
 
 1. Upload `wp-brief` to the `/wp-content/plugins/` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
+
+== How to use ==
+
+1. Afetr installation please visit 'Admin area' - 'Settings' - 'Brief'
+1. Check 'Enable' on the 'Brief' page
+1. Optionally add Brand logo and fill Developer Profile URL
+1. Update Changelog textarea in Markdown format
+1. Update Readme teaxtarea in Markdown format by technical documentation
+
+Changes will appear at 'Dashboard' area 'Brief' widget
 
 == Frequently Asked Questions
 
