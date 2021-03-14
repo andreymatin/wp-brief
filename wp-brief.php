@@ -8,7 +8,7 @@
  * @wordpress-plugin
  * Plugin Name:       WP Brief
  * Plugin URI:        https://github.com/andreymatin/wp-brief
- * Description:       Technical documentation
+ * Description:       Development reports and documentation
  * Version:           1.0.0
  * Author:            Andrew Matin
  * Author URI:        https://github.com/andreymatin

@@ -81,16 +81,16 @@ function wpb_options_content()
             </th>
             <td>
               <textarea name="wpb_settings[changelog]" id="wpb_settings[changelog]" class="large-text" rows="10" cols="50"><?php echo $wpb_options['changelog']; ?></textarea>
-              <p class="description"><?php _e('Last changes for the site, reports', 'wpb_domain'); ?></p>
+              <p class="description"><?php _e('Last changes (in markdown format)', 'wpb_domain'); ?></p>
             </td>
           </tr>
 
           <!-- Documentation Textarea -->
           <tr>
-            <th scope="row"><label for="wpb_settings[doc]"><?php _e('Documentation', 'wpb_domain'); ?></label></th>
+            <th scope="row"><label for="wpb_settings[doc]"><?php _e('Readme', 'wpb_domain'); ?></label></th>
             <td>
               <textarea name="wpb_settings[doc]" id="wpb_settings[doc]" class="large-text" rows="10" cols="50"><?php echo $wpb_options['doc']; ?></textarea>
-              <p class="description"><?php _e('Documentation, instructions, FAQ', 'wpb_domain'); ?></p>
+              <p class="description"><?php _e('Documentation, Links etc. (in markdown format)', 'wpb_domain'); ?></p>
             </td>
           </tr>
 

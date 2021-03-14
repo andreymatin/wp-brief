@@ -11,7 +11,15 @@ Development reports and documentation
 
 == Description ==
 
-WordPress widget to show development reports, readme, documentation from developer for the client.
+WP Brief is a WordPress plugin to show dashboard widget with development reports, readme, documentation from developer to client.
+The plugin supports markdown format. Developer can also add brand logo and link into report widget by configuration panel.
+
+= Features =
+
+1. Changelog in markdown format
+1. Readme in markdown format
+1. Brand Logo/Link 
+1. Enable/Disable dashboard widget 
 
 = Privacy notices =
 
