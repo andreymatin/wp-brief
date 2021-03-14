@@ -12,7 +12,11 @@ function wpb_dashboard_help()
 {
   global $wpb_options;
 ?>
-  <div id="brief-widget">
+  <div id="brief-widget" class="brief-widget">
+
+    <a class="wpb-brand-link" href="<?php echo $wpb_options['brand_url']; ?>" target="_blank">
+      <img id='wpb-brand' src='<?php echo wp_get_attachment_url($wpb_options['brand']); ?>' width='100'>
+    </a>
 
     <div class="wpb-tabs">
       <ul class="wpb-tabs-list">
@@ -20,7 +24,7 @@ function wpb_dashboard_help()
           <a class="wpb-tabs-links active" href="#wpbChangelog">Changelog</a>
         </li>
         <li class="wpb-tabs-items">
-          <a class="wpb-tabs-links" href="#wpbDocs">Documentation</a>
+          <a class="wpb-tabs-links" href="#wpbDocs">Readme</a>
         </li>
       </ul>
     </div>
