@@ -18,8 +18,8 @@ The plugin supports markdown format. Developer can also add brand logo and link 
 
 1. Changelog in markdown format
 1. Readme in markdown format
-1. Brand Logo/Link 
-1. Enable/Disable dashboard widget 
+1. Brand Logo/Link
+1. Enable/Disable dashboard widget
 
 = Privacy notices =
 
@@ -29,6 +29,12 @@ This plugin does not:
 * write any user personal data to the database;
 * send any data to external servers;
 * use cookies.
+
+= Vendor JavaScript Libraries =
+
+- jQuery Library [jQuery](https://jquery.com/)
+- JavaScript converter Markdown to HTML [showdown.js](https://github.com/showdownjs/showdown)
+
 
 == Installation ==
 
