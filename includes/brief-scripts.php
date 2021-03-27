@@ -6,13 +6,13 @@ if (is_admin()) {
   function wpb_add_admin_scripts()
   {
     // Styles for Widget and Config Panel
-    wp_enqueue_style('wpb-admin-style', plugins_url() . '/brief/assets/css/styles-admin.css');
+    wp_enqueue_style('wpb-admin-style', plugins_url('/assets/css/styles-admin.css', __FILE__));
 
     // Markdown Convertor
-    wp_enqueue_script('wpb-showdown', plugins_url() . '/brief/assets/js/showdown.js');
+    wp_enqueue_script('wpb-showdown', plugins_url('/assets/js/showdown.js', __FILE__));
 
     // Scripts for Plugin
-    wp_enqueue_script('wpb-main-script', plugins_url() . '/brief/assets/js/scripts-admin.js', 'jquery');
+    wp_enqueue_script('wpb-main-script', plugins_url('/assets/js/scripts-admin.js', __FILE__), 'jquery');
   }
 
   add_action('admin_init', 'wpb_add_admin_scripts');

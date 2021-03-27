@@ -1,9 +1,9 @@
-=== WP Brief ===
+=== Brief ===
 Contributors: andrewmatin
 Tags: report, changelog, readme, widget
-Requires at least: 3.0.1
-Tested up to: 3.4
-Stable tag: 4.3
+Stable tag: 1.0.0
+Requires at least: 5.7
+Tested up to: 5.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -11,7 +11,7 @@ Development reports and documentation
 
 == Description ==
 
-WP Brief is a WordPress plugin to show dashboard widget with development reports, readme, documentation from developer to client.
+Brief is a WordPress plugin to show dashboard widget with development reports, readme, documentation from developer to client.
 The plugin supports markdown format. Developer can also add brand logo and link into report widget by configuration panel.
 
 = Features =
@@ -41,9 +41,10 @@ This plugin does not:
 1. Upload `brief` to the `/wp-content/plugins/` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
 
+
 == How to use ==
 
-1. Afetr installation please visit 'Admin area' - 'Settings' - 'Brief'
+1. After installation please visit 'Admin area' - 'Settings' - 'Brief'
 1. Check 'Enable' on the 'Brief' page
 1. Optionally add Brand logo and fill Developer Profile URL
 1. Update Changelog textarea in Markdown format
@@ -58,12 +59,8 @@ Changes will appear at 'Dashboard' area 'Brief' widget
 
 == Changelog ==
 
-= 1.0 =
+= 1.0.0 =
 
 - Changelog Section (MD Posts)
 - Readme Section (Links List etc.)
 - Developer Brand with link
-
-
-== Upgrade Notice ==
-

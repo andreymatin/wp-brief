@@ -1,6 +1,4 @@
-# WP Brief
+# Brief
 
 Development reports and documentation
-
-
 

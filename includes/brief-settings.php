@@ -36,7 +36,6 @@ function wpb_options_content()
             <td><input name="wpb_settings[enable]" type="checkbox" id="wpb_settings[enable]" value="1" <?php checked('1', $wpb_options['enable']); ?>></td>
           </tr>
 
-
           <tr>
             <th scope="row"><label for="wpb_settings[brand]"><?php _e('Brand', 'wpb_domain'); ?></label></th>
             <td>
@@ -60,9 +59,6 @@ function wpb_options_content()
                 <input type='hidden' name='wpb_settings[brand]' id='wpb_settings[brand]' value='<?php echo $wpb_options['brand']; ?>'>
               </form>
 
-              <script type='text/javascript'>
-
-              </script>
             </td>
           </tr>
 

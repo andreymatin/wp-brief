@@ -11,12 +11,17 @@ function wpb_dashboard_widgets()
 function wpb_dashboard_help()
 {
   global $wpb_options;
+
+  $brand_url = $wpb_options['brand_url'];
+  $brand_img = wp_get_attachment_url($wpb_options['brand']);
 ?>
   <div id="brief-widget" class="brief-widget">
 
-    <a class="wpb-brand-link" href="<?php echo $wpb_options['brand_url']; ?>" target="_blank">
-      <img id='wpb-brand' src='<?php echo wp_get_attachment_url($wpb_options['brand']); ?>' width='100'>
-    </a>
+    <?php if (! empty($brand_url) && ! empty($brand_img)) : ?>
+      <a class="wpb-brand-link" href="<?php echo $brand_url; ?>" target="_blank">
+        <img id='wpb-brand' src='<?php echo $brand_img; ?>' width='100'>
+      </a>
+    <?php endif; ?>
 
     <div class="wpb-tabs">
       <ul class="wpb-tabs-list">
@@ -37,7 +42,7 @@ function wpb_dashboard_help()
 
         <div class="wpb-tabs-card__content">
           <?php
-          echo "\n" . $wpb_options['changelog'];
+          echo PHP_EOL . $wpb_options['changelog'];
           ?>
         </div><!-- /.wpb-tabs-card__content -->
       </div>
@@ -46,7 +51,7 @@ function wpb_dashboard_help()
       <div id="wpbDocs" class="wpb-tabs-card">
         <div class="wpb-tabs-card__content">
           <?php
-          echo "\n" . $wpb_options['doc'];
+          echo PHP_EOL . $wpb_options['doc'];
           ?>
         </div>
       </div>

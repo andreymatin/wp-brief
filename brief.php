@@ -7,7 +7,7 @@
  *
  * @wordpress-plugin
  * Plugin Name:       Brief
- * Plugin URI:        
+ * Plugin URI:        https://github.com/andreymatin/wp-brief
  * Description:       Development reports and documentation
  * Version:           1.0.0
  * Author:            Andrew Matin
@@ -15,7 +15,6 @@
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       wpb
- * Domain Path:       /languages
  **/
 
 if (!defined('ABSPATH')) {
@@ -23,6 +22,7 @@ if (!defined('ABSPATH')) {
 }
 
 define('WPB_VERSION', '1.0.0');
+
 
 // Global Options Variable
 $wpb_options = get_option('wpb_settings');
