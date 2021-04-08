@@ -3,28 +3,28 @@
     /**
      * Convert Markdown Text
      */
-    const wpbLog = document.querySelector('#wpbChangelog')
-    const wpbDocs = document.querySelector('#wpbDocs')
+    const briefLog = document.querySelector('#briefChangelog')
+    const briefDocs = document.querySelector('#briefDocs')
 
-    if (wpbLog && wpbDocs) {
-      const wpbLogText = wpbLog.querySelector('.wpb-tabs-card__content')
-      const wpbDocsText = wpbDocs.querySelector('.wpb-tabs-card__content')
+    if (briefLog && briefDocs) {
+      const briefLogText = briefLog.querySelector('.brief-tabs-card__content')
+      const briefDocsText = briefDocs.querySelector('.brief-tabs-card__content')
 
       const converter = new showdown.Converter()
 
-      let text = wpbLogText.innerHTML
+      let text = briefLogText.innerHTML
       let html = converter.makeHtml(text)
-      wpbLogText.innerHTML = html
+      briefLogText.innerHTML = html
 
-      text = wpbDocsText.innerHTML
+      text = briefDocsText.innerHTML
       html = converter.makeHtml(text)
-      wpbDocsText.innerHTML = html
+      briefDocsText.innerHTML = html
     }
 
     /**
      * Tabs
      */
-    const wbpTabs = document.querySelectorAll('.wpb-tabs-links')
+    const wbpTabs = document.querySelectorAll('.brief-tabs-links')
     if (wbpTabs) {
       wbpTabs.forEach((el) => {
         el.addEventListener('click', (e) => {
@@ -42,7 +42,7 @@
           const tab = document.querySelector(hash)
 
           if (tab) {
-            const tabs = document.querySelectorAll('.wpb-tabs-card')
+            const tabs = document.querySelectorAll('.brief-tabs-card')
             tabs.forEach((el) => {
               el.classList.remove('active')
             })
@@ -56,18 +56,18 @@
     /**
      * Expand
      */
-    const wpbExpand = document.querySelector('.wpb-expand')
-    if (wpbExpand) {
-      wpbExpand.addEventListener('click', (e) => {
+    const briefExpand = document.querySelector('.brief-expand')
+    if (briefExpand) {
+      briefExpand.addEventListener('click', (e) => {
         e.preventDefault()
         e.currentTarget.classList.add('hide')
 
-        const wpbTabsContent = document.querySelectorAll(
-          '.wpb-tabs-card__content'
+        const briefTabsContent = document.querySelectorAll(
+          '.brief-tabs-card__content'
         )
 
-        if (wpbTabsContent) {
-          wpbTabsContent.forEach((el) => {
+        if (briefTabsContent) {
+          briefTabsContent.forEach((el) => {
             el.classList.add('expand')
           })
         }
@@ -83,9 +83,9 @@
       // Uploading files
       var file_frame
       var wp_media_post_id = wp.media.model.settings.post.id // Store the old id
-      var set_to_post_id = $('#wpb_settings[brand]').val()
+      var set_to_post_id = $('#brief_settings[brand]').val()
 
-      jQuery('#wpbBtnUpload').on('click', function (event) {
+      jQuery('#briefBtnUpload').on('click', function (event) {
         event.preventDefault()
 
         // If the media frame already exists, reopen it.
@@ -116,10 +116,10 @@
           // We set multiple to false so only get one image from the uploader
           attachment = file_frame.state().get('selection').first().toJSON()
           // Do something with attachment.id and/or attachment.url here
-          $('#wpbImgPreview').attr('src', attachment.url)
-          $('#wpb_settings\\[brand\\]').val(attachment.id)
-          $('#wpbBtnRemove').addClass('active')
-          $('.wpb-img-wrapper').addClass('active')
+          $('#briefImgPreview').attr('src', attachment.url)
+          $('#brief_settings\\[brand\\]').val(attachment.id)
+          $('#briefBtnRemove').addClass('active')
+          $('.brief-img-wrapper').addClass('active')
 
           // Restore the main post ID
           wp.media.model.settings.post.id = wp_media_post_id
@@ -129,11 +129,11 @@
         file_frame.open()
       })
 
-      jQuery('#wpbBtnRemove').on('click', function (event) {
-        $('#wpb_settings\\[brand\\]').val('')
-        $('#wpbImgPreview').attr('src', '')
-        $('#wpbBtnRemove').removeClass('active')
-        $('.wpb-img-wrapper').removeClass('active')
+      jQuery('#briefBtnRemove').on('click', function (event) {
+        $('#brief_settings\\[brand\\]').val('')
+        $('#briefImgPreview').attr('src', '')
+        $('#briefBtnRemove').removeClass('active')
+        $('.brief-img-wrapper').removeClass('active')
       })
 
       // Restore the main ID when the add media button is pressed

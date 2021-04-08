@@ -1,69 +1,69 @@
 <?php
-global $wpb_options;
+global $brief_options;
 
-function wpb_dashboard_widgets()
+function brief_dashboard_widgets()
 {
   global $wp_meta_boxes;
 
-  wp_add_dashboard_widget('custom_help_widget', 'Brief', 'wpb_dashboard_help');
+  wp_add_dashboard_widget('custom_help_widget', 'Brief', 'brief_dashboard_help');
 }
 
-function wpb_dashboard_help()
+function brief_dashboard_help()
 {
-  global $wpb_options;
+  global $brief_options;
 
-  $brand_url = $wpb_options['brand_url'];
-  $brand_img = wp_get_attachment_url($wpb_options['brand']);
+  $brand_url = $brief_options['brand_url'];
+  $brand_img = wp_get_attachment_url($brief_options['brand']);
 ?>
   <div id="brief-widget" class="brief-widget">
 
     <?php if (! empty($brand_url) && ! empty($brand_img)) : ?>
-      <a class="wpb-brand-link" href="<?php echo $brand_url; ?>" target="_blank">
-        <img id='wpb-brand' src='<?php echo $brand_img; ?>' width='100'>
+      <a class="brief-brand-link" href="<?php echo $brand_url; ?>" target="_blank">
+        <img id='brief-brand' src='<?php echo $brand_img; ?>' width='100'>
       </a>
     <?php endif; ?>
 
-    <div class="wpb-tabs">
-      <ul class="wpb-tabs-list">
-        <li class="wpb-tabs-items">
-          <a class="wpb-tabs-links active" href="#wpbChangelog">Changelog</a>
+    <div class="brief-tabs">
+      <ul class="brief-tabs-list">
+        <li class="brief-tabs-items">
+          <a class="brief-tabs-links active" href="#briefChangelog">Changelog</a>
         </li>
-        <li class="wpb-tabs-items">
-          <a class="wpb-tabs-links" href="#wpbDocs">Readme</a>
+        <li class="brief-tabs-items">
+          <a class="brief-tabs-links" href="#briefDocs">Readme</a>
         </li>
       </ul>
     </div>
 
-    <div class="wpb-tabs-content">
+    <div class="brief-tabs-content">
 
       <!-- Changelog Card -->
-      <div id="wpbChangelog" class="wpb-tabs-card active">
+      <div id="briefChangelog" class="brief-tabs-card active">
         <h3>Recently Changed</h3>
 
-        <div class="wpb-tabs-card__content">
+        <div class="brief-tabs-card__content">
           <?php
-          echo PHP_EOL . $wpb_options['changelog'];
+          echo PHP_EOL . $brief_options['changelog'];
           ?>
-        </div><!-- /.wpb-tabs-card__content -->
+        </div><!-- /.brief-tabs-card__content -->
       </div>
 
       <!-- Docs Card -->
-      <div id="wpbDocs" class="wpb-tabs-card">
-        <div class="wpb-tabs-card__content">
+      <div id="briefDocs" class="brief-tabs-card">
+        <div class="brief-tabs-card__content">
           <?php
-          echo PHP_EOL . $wpb_options['doc'];
+          echo PHP_EOL . $brief_options['doc'];
           ?>
         </div>
       </div>
     </div>
 
-    <div class="wpb-tabs-card__footer">
-      <a class="wpb-expand" href="#">Expand</a>
-    </div><!-- /.wpb-tabs-card__footer -->
+    <div class="brief-tabs-card__footer">
+      <a class="brief-expand" href="#">Expand</a>
+    </div><!-- /.brief-tabs-card__footer -->
   </div>
 <?php
 }
 
-if ($wpb_options['enable']) {
-  add_action('wp_dashboard_setup', 'wpb_dashboard_widgets');
+if ($brief_options['enable']) {
+  add_action('wp_dashboard_setup', 'brief_dashboard_widgets');
 }
