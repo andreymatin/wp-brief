@@ -78,6 +78,9 @@ function brief_options_content()
             <td>
               <textarea name="brief_settings[changelog]" id="brief_settings[changelog]" class="large-text" rows="10" cols="50"><?php echo $brief_options['changelog']; ?></textarea>
               <p class="description"><?php _e('Last changes (in markdown format)', 'brief_domain'); ?></p>
+
+              <input name="brief_settings[disableChangelog]" type="checkbox" id="brief_settings[disableChangelog]" value="1" <?php checked('1', $brief_options['disableChangelog']); ?>>
+              <label for="brief_settings[disableChangelog]"><?php _e('Disable Changelog Tab', 'brief_domain'); ?></label></th>
             </td>
           </tr>
 
@@ -87,6 +90,33 @@ function brief_options_content()
             <td>
               <textarea name="brief_settings[doc]" id="brief_settings[doc]" class="large-text" rows="10" cols="50"><?php echo $brief_options['doc']; ?></textarea>
               <p class="description"><?php _e('Documentation, Links etc. (in markdown format)', 'brief_domain'); ?></p>
+
+              <input name="brief_settings[disableDoc]" type="checkbox" id="brief_settings[disableDoc]" value="1" <?php checked('1', $brief_options['disableDoc']); ?>>
+              <label for="brief_settings[disableDoc]"><?php _e('Disable Readme Tab', 'brief_domain'); ?></label></th>
+            </td>
+          </tr>
+
+          <!-- Promotions Textarea -->
+          <tr>
+            <th scope="row"><label for="brief_settings[promo]"><?php _e('Promotions', 'brief_domain'); ?></label></th>
+            <td>
+              <textarea name="brief_settings[promo]" id="brief_settings[promo]" class="large-text" rows="10" cols="50"><?php echo $brief_options['promo']; ?></textarea>
+              <p class="description"><?php _e('Promotions, News etc. (in markdown format)', 'brief_domain'); ?></p>
+
+              <input name="brief_settings[disablePromo]" type="checkbox" id="brief_settings[disablePromo]" value="1" <?php checked('1', $brief_options['disablePromo']); ?>>
+              <label for="brief_settings[disablePromo]"><?php _e('Disable Promotions Tab', 'brief_domain'); ?></label></th>
+            </td>
+          </tr>
+
+          <!-- Emergency Textarea -->
+          <tr>
+            <th scope="row"><label for="brief_settings[emergency]"><?php _e('Emergency', 'brief_domain'); ?></label></th>
+            <td>
+              <textarea name="brief_settings[emergency]" id="brief_settings[emergency]" class="large-text" rows="10" cols="50"><?php echo $brief_options['emergency']; ?></textarea>
+              <p class="description"><?php _e('Operative contact information etc. (in markdown format)', 'brief_domain'); ?></p>
+
+              <input name="brief_settings[disableEmergency]" type="checkbox" id="brief_settings[disableEmergency]" value="1" <?php checked('1', $brief_options['disableEmergency']); ?>>
+              <label for="brief_settings[disableEmergency]"><?php _e('Disable Emergency Tab', 'brief_domain'); ?></label></th>
             </td>
           </tr>
 

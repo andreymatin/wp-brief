@@ -2,14 +2,14 @@
 
 /**
  * @link              https://github.com/andreymatin
- * @since             1.0.0
+ * @since             1.0.1
  * @package           Brief
  *
  * @wordpress-plugin
  * Plugin Name:       Brief
  * Plugin URI:        https://github.com/andreymatin/wp-brief
  * Description:       Development reports and documentation
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            Andrew Matin
  * Author URI:        https://github.com/andreymatin
  * License:           GPL-2.0+
@@ -21,7 +21,7 @@ if (!defined('ABSPATH')) {
   exit;
 }
 
-define('BRIEF_VERSION', '1.0.0');
+define('BRIEF_VERSION', '1.0.1');
 
 
 // Global Options Variable

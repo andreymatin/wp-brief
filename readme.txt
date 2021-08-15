@@ -1,9 +1,9 @@
 === Brief ===
 Contributors: andrewmatin
-Tags: report, changelog, readme, widget
-Stable tag: 1.0.0
-Requires at least: 5.7
-Tested up to: 5.7
+Tags: report, changelog, readme, widget, promotions, emergency
+Stable tag: 1.0.1
+Requires at least: 5.8
+Tested up to: 5.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -58,6 +58,13 @@ Changes will appear at 'Dashboard' area 'Brief' widget
 
 
 == Changelog ==
+
+= 1.0.1 =
+
+- System: Updated for WP 5.8
+- UI: Added Promotions Tab
+- UI: Added Emergency Tab
+- Setting: Added Enable/Disable Tabs
 
 = 1.0.0 =
 
